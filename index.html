@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>KICKSTYLE - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h2>KICKSTYLE</h2></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrusel básico -->
+        <section class="carousel-container">
+            <button class="carousel-btn btn-prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide" style="background-image: url('imagenes/banner1.jpg');">
+                    <div class="carousel-content"><h2>Air Max Spectrum</h2><p>Estilo urbano y comodidad diaria.</p></div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('imagenes/banner2.jpg');">
+                    <div class="carousel-content"><h2>Quantum Flex</h2><p>Amortiguación de última generación.</p></div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('imagenes/banner3.jpg');">
+                    <div class="carousel-content"><h2>Viper Speed</h2><p>Ligereza absoluta y tracción óptima.</p></div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('imagenes/banner4.jpg');">
+                    <div class="carousel-content"><h2>Classic Retro</h2><p>Regreso de un ícono de los noventa.</p></div>
+                </div>
+            </div>
+            <button class="carousel-btn btn-next" onclick="moveCarousel(1)">&#10095;</button>
+        </section>
+
+        <!-- 8 Modelos Más Vendidos -->
+        <section class="container">
+            <h2 class="section-title">Modelos Más Vendidos</h2>
+            <div class="grid-container">
+                <div class="card"><div class="card-img"><img src="imagenes/banner4.jpg" alt=""></div><div class="card-info"><h3>Street Pro</h3><p class="price">$1,899.00</p></div></div>
+                <div class="card"><div class="card-img"><img src="imagenes/banner5.jpg" alt=""></div><div class="card-info"><h3>Dark Rebel</h3><p class="price">$2,100.00</p></div></div>
+                <div class="card"><div class="card-img"><img src="imagenes/banner6.jpg" alt=""></div><div class="card-info"><h3>White Urban</h3><p class="price">$1,750.00</p></div></div>
+                <div class="card"><div class="card-img"><img src="imagenes/banner7.jpg" alt=""></div><div class="card-info"><h3>Shadow Run</h3><p class="price">$1,999.00</p></div></div>
+                <div class="card"><div class="card-img"><img src="imagenes/banner4.jpg" alt=""></div><div class="card-info"><h3>Volt Hyper</h3><p class="price">$2,499.00</p></div></div>
+                <div class="card"><div class="card-img"><img src="imagenes/banner5.jpg" alt=""></div><div class="card-info"><h3>Classic Black</h3><p class="price">$1,599.00</p></div></div>
+                <div class="card"><div class="card-img"><img src="imagenes/banner6.jpg" alt=""></div><div class="card-info"><h3>Cloud Foam</h3><p class="price">$1,850.00</p></div></div>
+                <div class="card"><div class="card-img"><img src="imagenes/banner7.jpg" alt=""></div><div class="card-info"><h3>Retro Court</h3><p class="price">$1,699.00</p></div></div>
+            </div>
+        </section>
+
+        <!-- 2 Ofertas -->
+        <section class="container">
+            <h2 class="section-title">Ofertas Imperdibles</h2>
+            <div class="grid-container">
+                <div class="card"><div class="card-img"><img src="imagenes/banner5.jpg" alt=""></div><div class="card-info"><h3>Runner Blue</h3><p class="price">$1,610.00</p></div></div>
+                <div class="card"><div class="card-img"><img src="imagenes/banner6.jpg" alt=""></div><div class="card-info"><h3>Casual Pink</h3><p class="price">$1,520.00</p></div></div>
+            </div>
+        </section>
+
+        <!-- 3 Sucursales -->
+        <section class="container">
+            <h2 class="section-title">Nuestras Sucursales</h2>
+            <div class="sucursales-container">
+                <div class="sucursal-card"><img src="imagenes/banner4.jpg" alt="" class="sucursal-img-top"><h3>Sucursal Centro</h3><p>📍 Av. Central Poniente #123</p><p>📞 Tel: 961-123-4567</p><p>⏰ 09:00 AM - 08:00 PM</p></div>
+                <div class="sucursal-card"><img src="imagenes/banner5.jpg" alt="" class="sucursal-img-top"><h3>Sucursal Norte</h3><p>📍 Blvd. Belisario Domínguez Km 5</p><p>📞 Tel: 961-765-4321</p><p>⏰ 10:00 AM - 09:00 PM</p></div>
+                <div class="sucursal-card"><img src="imagenes/banner6.jpg" alt="" class="sucursal-img-top"><h3>Sucursal Oriente</h3><p>📍 Calzada Pensil #456</p><p>📞 Tel: 961-987-6543</p><p>⏰ 09:00 AM - 07:00 PM</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links"><a href="#">🌐 Facebook</a><a href="#">📸 Instagram</a><a href="#">🎵 TikTok</a></div>
+        <p>Examen Unidad 3. Universidad Politécnica de Chiapas.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

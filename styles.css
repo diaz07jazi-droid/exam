@@ -1,0 +1,360 @@
+/* ==========================================================================
+   1. VARIABLES Y ESTILOS GLOBALES
+   ========================================================================== */
+:root {
+    --primary: #111111;       /* Negro para fondos principales */
+    --accent: #e74c3c;        /* Rojo para resaltar precios y enlaces */
+    --light: #f4f4f4;         /* Gris claro para el fondo de la página */
+    --white: #ffffff;         /* Blanco para las tarjetas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Tipografía básica estándar */
+}
+
+body {
+    background-color: var(--light);
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Container general para centrar el contenido */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Títulos de las secciones */
+.section-title {
+    text-align: center;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
+    margin: 0.5rem auto 0;
+}
+
+
+/* ==========================================================================
+   2. HEADER Y NAVEGACIÓN (MENÚ)
+   ========================================================================== */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--accent);
+}
+
+header .logo h2 {
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover, 
+nav a.active {
+    color: var(--accent);
+}
+
+
+/* ==========================================================================
+   3. SECCIÓN DEL CARRUSEL (SLIDER)
+   ========================================================================== */
+.carousel-container {
+    max-width: 1100px;
+    margin: 1rem auto;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.55); /* Oscurece la imagen de fondo */
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.carousel-slide h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+.carousel-btn:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn-prev { left: 10px; }
+.btn-next { right: 10px; }
+
+
+/* ==========================================================================
+   4. CUADRÍCULA DE PRODUCTOS (GRID CARDS)
+   ========================================================================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    padding: 1rem;
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.price {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+
+/* ==========================================================================
+   5. SECCIÓN DE SUCURSALES
+   ========================================================================== */
+.sucursales-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sucursal-card {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sucursal-img-top {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.sucursal-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.sucursal-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+
+/* ==========================================================================
+   6. BOTONES DE FILTRADO (PÁGINA MENÚ)
+   ========================================================================== */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--primary);
+    background: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.filter-btn.active, 
+.filter-btn:hover {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+}
+
+
+/* ==========================================================================
+   7. TABLA DE COMPRAS (PÁGINA CARRITO)
+   ========================================================================== */
+.table-container {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    overflow-x: auto; /* Evita que la tabla se rompa en celulares */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.qty-input {
+    width: 50px;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Contenedor del Total alineado a la derecha inferior */
+.cart-total-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.cart-total {
+    background: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-right: 4px solid var(--accent);
+}
+
+.cart-total h3 span {
+    color: var(--accent);
+}
+
+
+/* ==========================================================================
+   8. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 3px solid var(--accent);
+}
+
+.social-links {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: var(--white);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: #cccccc;
+}

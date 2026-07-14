@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>KICKSTYLE - Catálogo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h2>KICKSTYLE</h2></div>
+        <nav><ul><li><a href="index.html">Inicio</a></li><li><a href="menu.html" class="active">Menú</a></li><li><a href="carrito.html">Carrito</a></li></ul></nav>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Catálogo Completo</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCatalog('todos', event)">Todos</button>
+            <button class="filter-btn" onclick="filterCatalog('caballero', event)">Caballero</button>
+            <button class="filter-btn" onclick="filterCatalog('dama', event)">Dama</button>
+            <button class="filter-btn" onclick="filterCatalog('niño', event)">Niño</button>
+            <button class="filter-btn" onclick="filterCatalog('niña', event)">Niña</button>
+        </div>
+
+        <div class="grid-container">
+            <!-- Caballero (6) -->
+            <div class="card product-item caballero"><img src="imagenes/banner4.jpg" class="card-img" alt=""><div class="card-info"><h3>Men Alpha 1</h3><p>Caballero</p><p class="price">$1,999.00</p></div></div>
+            <div class="card product-item caballero"><img src="imagenes/banner5.jpg" class="card-img" alt=""><div class="card-info"><h3>Men Alpha 2</h3><p>Caballero</p><p class="price">$2,199.00</p></div></div>
+            <div class="card product-item caballero"><img src="imagenes/banner6.jpg" class="card-img" alt=""><div class="card-info"><h3>Men Alpha 3</h3><p>Caballero</p><p class="price">$1,850.00</p></div></div>
+            <div class="card product-item caballero"><img src="imagenes/banner7.jpg" class="card-img" alt=""><div class="card-info"><h3>Men Alpha 4</h3><p>Caballero</p><p class="price">$2,400.00</p></div></div>
+            <div class="card product-item caballero"><img src="imagenes/banner4.jpg" class="card-img" alt=""><div class="card-info"><h3>Men Alpha 5</h3><p>Caballero</p><p class="price">$1,799.00</p></div></div>
+            <div class="card product-item caballero"><img src="imagenes/banner5.jpg" class="card-img" alt=""><div class="card-info"><h3>Men Alpha 6</h3><p>Caballero</p><p class="price">$2,050.00</p></div></div>
+            <!-- Dama (6) -->
+            <div class="card product-item dama"><img src="imagenes/banner6.jpg" class="card-img" alt=""><div class="card-info"><h3>Dama Zeta 1</h3><p>Dama</p><p class="price">$1,699.00</p></div></div>
+            <div class="card product-item dama"><img src="imagenes/banner7.jpg" class="card-img" alt=""><div class="card-info"><h3>Dama Zeta 2</h3><p>Dama</p><p class="price">$1,899.00</p></div></div>
+            <div class="card product-item dama"><img src="imagenes/banner4.jpg" class="card-img" alt=""><div class="card-info"><h3>Dama Zeta 3</h3><p>Dama</p><p class="price">$1,950.00</p></div></div>
+            <div class="card product-item dama"><img src="imagenes/banner5.jpg" class="card-img" alt=""><div class="card-info"><h3>Dama Zeta 4</h3><p>Dama</p><p class="price">$2,100.00</p></div></div>
+            <div class="card product-item dama"><img src="imagenes/banner6.jpg" class="card-img" alt=""><div class="card-info"><h3>Dama Zeta 5</h3><p>Dama</p><p class="price">$1,599.00</p></div></div>
+            <div class="card product-item dama"><img src="imagenes/banner7.jpg" class="card-img" alt=""><div class="card-info"><h3>Dama Zeta 6</h3><p>Dama</p><p class="price">$1,750.00</p></div></div>
+            <!-- Niño (6) -->
+            <div class="card product-item niño"><img src="imagenes/banner4.jpg" class="card-img" alt=""><div class="card-info"><h3>Kid Max 1</h3><p>Niño</p><p class="price">$1,199.00</p></div></div>
+            <div class="card product-item niño"><img src="imagenes/banner5.jpg" class="card-img" alt=""><div class="card-info"><h3>Kid Max 2</h3><p>Niño</p><p class="price">$1,299.00</p></div></div>
+            <div class="card product-item niño"><img src="imagenes/banner6.jpg" class="card-img" alt=""><div class="card-info"><h3>Kid Max 3</h3><p>Niño</p><p class="price">$1,090.00</p></div></div>
+            <div class="card product-item niño"><img src="imagenes/banner7.jpg" class="card-img" alt=""><div class="card-info"><h3>Kid Max 4</h3><p>Niño</p><p class="price">$1,350.00</p></div></div>
+            <div class="card product-item niño"><img src="imagenes/banner4.jpg" class="card-img" alt=""><div class="card-info"><h3>Kid Max 5</h3><p>Niño</p><p class="price">$999.00</p></div></div>
+            <div class="card product-item niño"><img src="imagenes/banner5.jpg" class="card-img" alt=""><div class="card-info"><h3>Kid Max 6</h3><p>Niño</p><p class="price">$1,250.00</p></div></div>
+            <!-- Niña (6) -->
+            <div class="card product-item niña"><img src="imagenes/banner6.jpg" class="card-img" alt=""><div class="card-info"><h3>Princess Fit 1</h3><p>Niña</p><p class="price">$1,150.00</p></div></div>
+            <div class="card product-item niña"><img src="imagenes/banner7.jpg" class="card-img" alt=""><div class="card-info"><h3>Princess Fit 2</h3><p>Niña</p><p class="price">$1,299.00</p></div></div>
+            <div class="card product-item niña"><img src="imagenes/banner4.jpg" class="card-img" alt=""><div class="card-info"><h3>Princess Fit 3</h3><p>Niña</p><p class="price">$1,100.00</p></div></div>
+            <div class="card product-item niña"><img src="imagenes/banner5.jpg" class="card-img" alt=""><div class="card-info"><h3>Princess Fit 4</h3><p>Niña</p><p class="price">$1,399.00</p></div></div>
+            <div class="card product-item niña"><img src="imagenes/banner6.jpg" class="card-img" alt=""><div class="card-info"><h3>Princess Fit 5</h3><p>Niña</p><p class="price">$1,050.00</p></div></div>
+            <div class="card product-item niña"><img src="imagenes/banner7.jpg" class="card-img" alt=""><div class="card-info"><h3>Princess Fit 6</h3><p>Niña</p><p class="price">$1,200.00</p></div></div>
+        </div>
+    </main>
+
+    <footer><p>Examen Unidad 3. Universidad Politécnica de Chiapas.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
